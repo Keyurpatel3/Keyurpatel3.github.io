@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Detail | Keyur Patel</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">KP</a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="social-nav">
+        <a href="https://www.linkedin.com/in/keyur-patel-4b87a4147" target="_blank" class="social-icon">
+          <img src="images/LI-In-Bug.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/KeyurPatel2002" target="_blank" class="social-icon">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Detail Section -->
+  <section class="project-detail">
+    <div class="container">
+      <div class="project-header" data-aos="fade-up">
+        <h1>Project Title</h1>
+        <div class="project-meta">
+          <span class="project-date">2024</span>
+          <div class="project-tags">
+            <span>Tag 1</span>
+            <span>Tag 2</span>
+            <span>Tag 3</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-gallery" data-aos="fade-up">
+        <div class="main-image">
+          <img src="images/project7-main.jpg" alt="Project Main Image" id="mainImage">
+        </div>
+        <div class="thumbnail-container">
+          <div class="thumbnail active" onclick="changeImage('images/project7-main.jpg')">
+            <img src="images/project7-main.jpg" alt="Thumbnail 1">
+          </div>
+          <div class="thumbnail" onclick="changeImage('images/project7-alt.jpg')">
+            <img src="images/project7-alt.jpg" alt="Thumbnail 2">
+          </div>
+          <div class="thumbnail" onclick="changeImage('images/project7-alt2.jpg')">
+            <img src="images/project7-alt2.jpg" alt="Thumbnail 3">
+          </div>
+        </div>
+      </div>
+
+      <div class="project-content" data-aos="fade-up">
+        <div class="project-description">
+          <h2>Project Overview</h2>
+          <p>Detailed project description goes here. This section can include multiple paragraphs describing the project, its goals, challenges, and solutions.</p>
+          <p>You can add more paragraphs here to provide comprehensive information about the project.</p>
+        </div>
+
+        <div class="project-details">
+          <h2>Technical Details</h2>
+          <ul>
+            <li>Detail 1</li>
+            <li>Detail 2</li>
+            <li>Detail 3</li>
+          </ul>
+        </div>
+
+        <div class="project-results">
+          <h2>Results & Impact</h2>
+          <p>Description of the project results and its impact.</p>
+        </div>
+      </div>
+
+      <div class="project-navigation" data-aos="fade-up">
+        <a href="#" class="btn secondary-btn">Previous Project</a>
+        <a href="index.html#projects" class="btn primary-btn">Back to Projects</a>
+        <a href="#" class="btn secondary-btn">Next Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 Keyur Patel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+
+    function changeImage(src) {
+      document.getElementById('mainImage').src = src;
+      // Update active thumbnail
+      document.querySelectorAll('.thumbnail').forEach(thumb => {
+        thumb.classList.remove('active');
+        if (thumb.querySelector('img').src === src) {
+          thumb.classList.add('active');
+        }
+      });
+    }
+  </script>
+</body>
+</html> 
